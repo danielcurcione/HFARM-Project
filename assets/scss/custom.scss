@@ -1,0 +1,69 @@
+nav.level {
+  padding: 20px 10px;
+  border-bottom: 1px solid lightgrey;
+  align-items: center;
+}
+
+p.control {
+  margin: 0 !important;
+}
+
+.title {
+  margin: 0 !important;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.card-item {
+  width: 20%;
+  padding: 10px;
+}
+
+.card {
+  height: 150px;
+}
+
+.card-content:hover {
+  cursor: pointer;
+}
+
+.card-header {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.card-header-title {
+  margin: 0 !important;
+}
+
+.add-button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .button {
+    padding: 20px;
+  }
+}
+
+.modal-card-foot {
+  justify-content: flex-end;
+}
+
+.select, .select select {
+  width: 100%;
+}
+
+.modal-content, .modal-card {
+  width: 450px;
+}

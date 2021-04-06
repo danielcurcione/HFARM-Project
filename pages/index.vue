@@ -2,7 +2,8 @@
   <div class="container">
     <div>
 
-      <Homepage />
+      <Header />
+      <Dashboard />
     
     </div>
   </div>

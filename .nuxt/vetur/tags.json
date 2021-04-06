@@ -1,0 +1,14 @@
+{
+  "AddDialog": {
+    "description": "Auto imported from components/AddDialog.vue"
+  },
+  "Card": {
+    "description": "Auto imported from components/Card.vue"
+  },
+  "Dashboard": {
+    "description": "Auto imported from components/Dashboard.vue"
+  },
+  "Header": {
+    "description": "Auto imported from components/Header.vue"
+  }
+}

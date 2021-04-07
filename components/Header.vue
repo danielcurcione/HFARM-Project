@@ -5,7 +5,7 @@
       <nav class="level">
         <!-- Left side -->
         <div class="level-left">
-          <h1 class="title">Calls</h1>
+          <h1 class="title"> {{ title }} </h1>
         </div>
 
         <!-- Right side -->
@@ -13,10 +13,10 @@
           <div class="level-item">
             <div class="field has-addons">
               <p class="control">
-                <input class="input" type="text" placeholder="Search...">
+                <input id="searchInput" class="input" type="text" placeholder="Search...">
               </p>
               <p class="control">
-                <button class="button">
+                <button class="button" @click="search()">
                   Search
                 </button>
               </p>
@@ -28,3 +28,15 @@
 
   </div>
 </template>
+
+<script>
+export default {
+  props: ['title'],
+  methods: {
+    search() {
+      var s = document.getElementById("searchInput").value;
+      this.$parent.search(s);
+    }
+  }
+}
+</script>

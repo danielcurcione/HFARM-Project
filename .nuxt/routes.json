@@ -3,6 +3,14 @@
     "name": "index",
     "path": "/",
     "component": "/Users/Daniel/Desktop/Git/HFARM-Project/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_43f5e28c"
+  },
+  {
+    "name": "type-slug",
+    "path": "/:type/:slug?",
+    "component": "/Users/Daniel/Desktop/Git/HFARM-Project/pages/_type/_slug.vue",
+    "chunkName": "pages/_type/_slug",
+    "_name": "_3fe872fc"
   }
 ]

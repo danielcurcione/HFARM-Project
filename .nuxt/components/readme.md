@@ -10,3 +10,6 @@ You can directly use them in pages and other components without the need to impo
 - `<Card>` | `<card>` (components/Card.vue)
 - `<Dashboard>` | `<dashboard>` (components/Dashboard.vue)
 - `<Header>` | `<header>` (components/Header.vue)
+- `<NoteDialog>` | `<note-dialog>` (components/NoteDialog.vue)
+- `<OptionButton>` | `<option-button>` (components/OptionButton.vue)
+- `<Table>` | `<table>` (components/Table.vue)

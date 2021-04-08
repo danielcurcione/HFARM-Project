@@ -6,40 +6,19 @@
 
       <!-- <h1 class="title"> {{ slug }} in {{ type }} </h1> -->
 
-      <br>
+      <div class="job-description">
+        
+      </div>
 
-      <table class="table is-fullwidth">
-        <thead>
-          <tr>
-            <th>Candidates</th>
-            <th>Senior level</th>
-            <th>Call they applied to</th>
-            <th>Notes</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <template v-for="item in items">
-            <tr :key="item.name">
-              <th> {{ item.name }} </th>
-              <td> {{ item.level }} </td>
-              <td> {{ item.client }} </td>
-              <td>
-                <div v-if="item.note === 'X'">
-                  <button class="button is-white">
-                    <img src="../../assets/note.svg" width="20px">
-                  </button>
-                </div>
-              </td>
-              <td>
-                <button class="button is-white">
-                  <img src="../../assets/edit.svg" width="20px">
-                </button>
-              </td>
-            </tr>
-          </template>
-        </tbody>
-      </table>
+
+      <div v-show="noteDialog">
+        <NoteDialog :name="noteName"/>
+      </div>
+
+      <div class="candidates">
+        <Table :data="items"/>
+      </div>
+      
     
     </div>
   </div>
@@ -49,34 +28,30 @@
   export default {
     data() {
       return {
-        items: [
-        {
+        items: [{
           name: 'Daniel Curcione',
           level: 'Junior',
-          client: 'Me stesso',
+          client: 'Internal',
           note: 'X'
-        },
-        {
+        }, {
           name: 'Mario Rossi',
           level: 'Executive',
-          client: '',
+          client: 'Luxottica',
           note: ''
-        },
-        {
+        }, {
           name: 'Luigi Orlando',
           level: 'SR Manager',
-          client: '',
+          client: 'Internal',
           note: 'X'
-        },
-        ]
+        }],
+        noteDialog: false,
+        noteName: ''
       }
     },
     methods: {
       search(s) {
-        if (s === '') {
-          // read data
-          return;
-        }
+        if (s === '')
+          return; // read data
 
         var list = [];
 
@@ -86,7 +61,12 @@
         });
 
         this.items = list;
-      }
+      },
+
+      openDialog (opt, name) {
+        this.noteDialog = opt;
+        this.noteName = name;
+      },
     },
     async asyncData({ params }) {
       const slug = params.slug

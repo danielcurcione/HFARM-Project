@@ -72,8 +72,24 @@ p.control {
   width: 450px;
 }
 
+.candidates {
+  width: 100%;
+}
+
 .table {
+  margin-top: 12px;
+
   th, td {
     vertical-align: middle;
+  }
+}
+
+.delete {
+  float: right;
+}
+
+.note-dialog {
+  .modal-card-body {
+    border-radius: 6px !important;
   }
 }

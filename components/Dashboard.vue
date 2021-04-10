@@ -5,13 +5,10 @@
       <div class="card-item" @click="openDialog(true)">
         <Card :noContent="true"/>
       </div>
-      <div class="card-item">
-        <nuxt-link to="/Internal/PosizioneN">
-          <Card title="Posizione n" client="Internal" fav=""/>
-        </nuxt-link>
-      </div>
       <div v-for="item in data" :key="item.title" class="card-item">
-        <Card :title="item.name" :client="item.client" :fav="item.favorite"/>
+        <nuxt-link to="/Internal/PosizioneN">
+          <Card :title="item.name" :client="item.client" :fav="item.favorite"/>
+        </nuxt-link>
       </div>
     </div>
 

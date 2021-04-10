@@ -22,33 +22,28 @@ export default {
     this.readData();
   },
   methods: {
-    readData() {
-      let url = 'https://api.sheety.co/ec400a6bb2ac250558c262e5fab58060/hfarmData/foglio1';
+    readData(filter) {
+      let url = 'https://api.sheety.co/ec400a6bb2ac250558c262e5fab58060/hfarmData/cards';
       var list = [];
     
       axios.get(url).then(response => {
-        response.data.foglio1.forEach(element => {
-          list.push(element);
-        });
+        if (filter) {
+          response.data.cards.forEach(element => {
+            if (element.name.includes(filter))
+              list.push(element);
+          });
+        } else {
+          response.data.cards.forEach(element => {
+            list.push(element);
+          });
+        }
 
         this.cards = list.reverse();
       })
     },
 
     search(s) {
-      if (s === '') {
-        this.readData();
-        return;
-      }
-
-      var list = [];
-
-      this.cards.forEach(element => {
-        if (element.name.includes(s))
-            list.push(element)
-      });
-
-      this.cards = list;
+      this.readData(s);
     },
   }
 }

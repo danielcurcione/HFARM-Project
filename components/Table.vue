@@ -11,13 +11,13 @@
     </thead>
     <tbody>
       <template v-for="item in data">
-        <tr :key="item.name">
-          <td> {{ item.name }} </td>
-          <td> {{ item.level }} </td>
-          <td> {{ item.client }} </td>
+        <tr :key="item.id">
+          <td> {{ item.candidates }} </td>
+          <td> {{ item.seniorLevel }} </td>
+          <td> {{ item.callTheyAppliedTo }} </td>
           <td>
-            <div v-if="item.note === 'X'">
-              <button class="button is-white" @click="openDialog(true, item.name)">
+            <div v-if="item.notes === 'X'">
+              <button class="button is-white" @click="openDialog(true, item.candidates)">
                 <img src="../assets/note.svg" width="20px">
               </button>
             </div>

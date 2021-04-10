@@ -4,74 +4,76 @@
 
       <Header title="Candidates" />
 
-      <!-- <h1 class="title"> {{ slug }} in {{ type }} </h1> -->
-
-      <div class="job-description">
-        
-      </div>
-
-
       <div v-show="noteDialog">
         <NoteDialog :name="noteName"/>
       </div>
 
+      <!-- <div class="myloader" v-show="loader">
+        <div class="dot-falling"></div>
+      </div> -->
+      <!-- <div class="candidates" v-show="!loader">
+        <Table :data="candidates"/>
+      </div> -->
+
       <div class="candidates">
-        <Table :data="items"/>
+        <Table :data="candidates"/>
       </div>
-      
     
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        items: [{
-          name: 'Daniel Curcione',
-          level: 'Junior',
-          client: 'Internal',
-          note: 'X'
-        }, {
-          name: 'Mario Rossi',
-          level: 'Executive',
-          client: 'Luxottica',
-          note: ''
-        }, {
-          name: 'Luigi Orlando',
-          level: 'SR Manager',
-          client: 'Internal',
-          note: 'X'
-        }],
-        noteDialog: false,
-        noteName: ''
-      }
-    },
-    methods: {
-      search(s) {
-        if (s === '')
-          return; // read data
+import axios from 'axios';
 
-        var list = [];
-
-        this.items.forEach(element => {
-          if (element.name.includes(s))
-              list.push(element)
-        });
-
-        this.items = list;
-      },
-
-      openDialog (opt, name) {
-        this.noteDialog = opt;
-        this.noteName = name;
-      },
-    },
-    async asyncData({ params }) {
-      const slug = params.slug
-      const type = params.type
-      return { slug, type }
+export default {
+  data() {
+    return {
+      candidates: [],
+      noteDialog: false,
+      noteName: '',
+      // loader: false
     }
+  },
+  mounted() {
+    this.readData();
+  },
+  methods: {
+    readData(filter) {
+      this.loader = true;
+      let url = 'https://api.sheety.co/ec400a6bb2ac250558c262e5fab58060/hfarmData/candidates';
+      var list = [];
+    
+      axios.get(url).then(response => {
+        if (filter) {
+          response.data.candidates.forEach(element => {
+            if (element.candidates.includes(filter))
+              list.push(element);
+          });
+        } else {
+          response.data.candidates.forEach(element => {
+            list.push(element);
+          });
+        }
+
+        // this.loader = false;
+        this.candidates = list;
+      });
+    },
+
+    search(s) {
+      this.readData(s);
+    },
+
+    openDialog (opt, name) {
+      this.noteDialog = opt;
+      this.noteName = name;
+    },
+  },
+  async asyncData({ params }) {
+    const slug = params.slug
+    const type = params.type
+    return { slug, type }
   }
+}
 </script>

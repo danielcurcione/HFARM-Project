@@ -1,11 +1,47 @@
+// colors:
+$white: #FFFFFF;
+$grey: #F5F5F5;
+$cyan: #EBF7FF;
+$blue: #2B58DE;
+$black: #000000;
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: $cyan;
+}
+
 nav.level {
-  padding: 20px 10px;
-  border-bottom: 1px solid lightgrey;
   align-items: center;
+  padding: 25px 20px 5px;
+  
+  h2 {
+    font-weight: 700;
+  }
 }
 
 p.control {
   margin: 0 !important;
+
+  input, button {
+    background-color: $white;
+    border: none;
+    box-shadow: none;
+  }
+
+  input, button {
+    font-size: 14px;
+  }
+
+  input:hover, button:hover {
+    border: 1px solid $blue;
+  }
+
+  button {
+    background-color: $blue;
+    border: 1px solid $blue;
+    color: $white;
+  }
 }
 
 .title {
@@ -19,20 +55,24 @@ p.control {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  margin-top: 10px;
-}
-
-.card-item {
-  width: 20%;
   padding: 10px;
 }
 
 .card {
-  height: 150px;
+  height: 120px;
+  border: none;
+  box-shadow: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.card-item {
+  width: 25%;
+  padding: 10px;
 }
 
 .card-content {
-  padding: 0.75rem 1rem;
+  padding: 20px 0;
 }
 
 .card-content:hover {
@@ -42,10 +82,28 @@ p.control {
 .card-header {
   display: flex !important;
   align-items: center !important;
+  box-shadow: none;
 }
 
 .card-header-title {
   margin: 0 !important;
+  padding: 0;
+
+  span {
+    background-color: $blue;
+    color: $white;
+    border-radius: 3px;
+    padding: 3px 6px;
+    font-weight: 500;
+  }
+
+  span.external {
+    background-color: #11276A;
+  }
+}
+
+.external {
+  background-color: red;
 }
 
 .add-button {
@@ -60,8 +118,34 @@ p.control {
   }
 }
 
+.modal-card-head, .modal-card-foot, .modal-card-body {
+  border: none;
+  background-color: $cyan;
+  padding: 15px;
+
+  input, select {
+    border: none;
+    border: 1px solid $white;
+    box-shadow: none;
+
+    &:hover {
+      border: 1px solid $blue;
+    }
+  }
+}
+
 .modal-card-foot {
   justify-content: flex-end;
+
+  .button.is-success {
+    font-size: 14px;
+    background-color: $blue;
+    color: $white;
+  }
+}
+
+button.delete {
+  background-color: $blue;
 }
 
 .select, .select select {
@@ -98,4 +182,130 @@ p.control {
   position: relative;
   width: max-content;
   margin: 20px auto;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-left {
+  position: fixed;
+  width: 250px;
+  min-width: 250px;
+  height: 100%;
+}
+
+.content-right {
+  width: calc(100% - 250px);
+  margin-left: 250px;
+}
+
+.navbar {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+div.logo {
+  .logo-title {
+    font-size: 35px;
+    font-weight: 700;
+    color: $blue;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: -1px;
+  }
+}
+
+div.profile {
+  margin: 30px 0;
+  background-color: $cyan;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding: 8px;
+  border-radius: 5px;
+
+  div.avatar {
+    border-radius: 3px;
+    height: 40px;
+    width: 40px;
+    background-color: $white;
+    padding: 5px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  div.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-left: 10px;
+    color: $black;
+
+    .name {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .role {
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+}
+
+.menu a {
+  padding: 5px;
+  width: 100%;
+  font-size: 13px;
+  color: $black;
+
+  img {
+    margin-right: 10px;
+    width: 15px;
+  }
+}
+
+.menu a:hover {
+  background-color: $grey;
+  border-radius: 5px;
+  color: $black;
+}
+
+.candidates {
+  padding: 10px 20px;
+}
+
+.candidates-items {
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: $white;
+  height: 87vh;
+  overflow: scroll;
+
+  .table {
+    margin: 0;
+  }
+
+  thead {
+    background-color: $grey;
+  }
+
+  tr {
+    border-radius: 5px;
+  }
+
+  th, td {
+    border: none;
+  }
 }

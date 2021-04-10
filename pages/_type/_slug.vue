@@ -1,19 +1,12 @@
 <template>
-  <div class="container">
+  <div>
     <div>
 
-      <Header title="Candidates" />
+      <Header :title="slug" />
 
       <div v-show="noteDialog">
         <NoteDialog :name="noteName"/>
       </div>
-
-      <!-- <div class="myloader" v-show="loader">
-        <div class="dot-falling"></div>
-      </div> -->
-      <!-- <div class="candidates" v-show="!loader">
-        <Table :data="candidates"/>
-      </div> -->
 
       <div class="candidates">
         <Table :data="candidates"/>

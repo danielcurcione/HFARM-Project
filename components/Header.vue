@@ -5,7 +5,7 @@
       <nav class="level">
         <!-- Left side -->
         <div class="level-left">
-          <h1 class="title"> {{ title }} </h1>
+          <h2 class="title"> {{ title }} </h2>
         </div>
 
         <!-- Right side -->
@@ -17,7 +17,7 @@
               </p>
               <p class="control">
                 <button class="button" @click="search()">
-                  Search
+                  <img src="../assets/search.svg" width="15px">
                 </button>
               </p>
             </div>

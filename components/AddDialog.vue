@@ -3,7 +3,7 @@
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title">Aggiungi nuova</p>
+        <p class="modal-card-title">Aggiungi nuova Calls</p>
         <button class="delete" aria-label="close" @click="openDialog(false)"></button>
       </header>
       <section class="modal-card-body">
@@ -38,7 +38,6 @@
       </section>
       <footer class="modal-card-foot">
         <button class="button is-success" @click="createNewCard()">Conferma</button>
-        <button class="button" @click="openDialog(false)">Annulla</button>
       </footer>
     </div>
   </div>
@@ -85,17 +84,10 @@ export default {
       if (fav)
         fav = 'X';
       
-      let url = 'https://api.sheety.co/ec400a6bb2ac250558c262e5fab58060/hfarmData/foglio1';
-      let body = {
-        foglio1: {
-          name: descr,
-          client: client,
-          favorite: fav
-        }
-      }
+      let url = 'https://api.sheety.co/ec400a6bb2ac250558c262e5fab58060/hfarmData/cards';
 
       axios.post(url, {
-        foglio1: {
+        card: {
           name: descr,
           client: client,
           favorite: fav

@@ -7,9 +7,10 @@ You can directly use them in pages and other components without the need to impo
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
 - `<AddDialog>` | `<add-dialog>` (components/AddDialog.vue)
+- `<Calls>` | `<calls>` (components/Calls.vue)
 - `<Card>` | `<card>` (components/Card.vue)
-- `<Dashboard>` | `<dashboard>` (components/Dashboard.vue)
 - `<Header>` | `<header>` (components/Header.vue)
+- `<Navbar>` | `<navbar>` (components/Navbar.vue)
 - `<NoteDialog>` | `<note-dialog>` (components/NoteDialog.vue)
 - `<OptionButton>` | `<option-button>` (components/OptionButton.vue)
 - `<Table>` | `<table>` (components/Table.vue)

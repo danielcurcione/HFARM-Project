@@ -3,6 +3,7 @@ $white: #FFFFFF;
 $grey: #F5F5F5;
 $cyan: #EBF7FF;
 $blue: #2B58DE;
+$orange: #FF8800;
 $black: #000000;
 
 html, body {
@@ -23,24 +24,25 @@ nav.level {
 p.control {
   margin: 0 !important;
 
+  #searchInput {
+    border: 1px solid $white;
+  }
+
   input, button {
     background-color: $white;
     border: none;
     box-shadow: none;
-  }
-
-  input, button {
     font-size: 14px;
-  }
-
-  input:hover, button:hover {
-    border: 1px solid $blue;
   }
 
   button {
     background-color: $blue;
     border: 1px solid $blue;
     color: $white;
+  }
+
+  #searchInput:hover, button:hover {
+    border: 1px solid $blue;
   }
 }
 
@@ -103,13 +105,9 @@ p.control {
     }
   
     span.external {
-      background-color: #11276A;
+      background-color: $orange;
     }
   }
-}
-
-.external {
-  background-color: red;
 }
 
 .add-button {
@@ -301,10 +299,22 @@ div.profile {
   padding: 10px;
   background-color: $white;
   height: 87vh;
-  overflow: scroll;
+
+  .scoll-table {
+    height: 80vh;
+    overflow: scroll;
+  }
 
   .table {
     margin: 0;
+
+    .client-input {
+      color: $orange;
+    }
+
+    .Internal {
+      color: $blue;
+    }
   }
 
   thead {

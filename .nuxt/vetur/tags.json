@@ -17,9 +17,6 @@
   "NoteDialog": {
     "description": "Auto imported from components/NoteDialog.vue"
   },
-  "OptionButton": {
-    "description": "Auto imported from components/OptionButton.vue"
-  },
   "Table": {
     "description": "Auto imported from components/Table.vue"
   }

@@ -7,7 +7,6 @@ const components = {
   Header: () => import('../../components/Header.vue' /* webpackChunkName: "components/header" */).then(c => c.default || c),
   Navbar: () => import('../../components/Navbar.vue' /* webpackChunkName: "components/navbar" */).then(c => c.default || c),
   NoteDialog: () => import('../../components/NoteDialog.vue' /* webpackChunkName: "components/note-dialog" */).then(c => c.default || c),
-  OptionButton: () => import('../../components/OptionButton.vue' /* webpackChunkName: "components/option-button" */).then(c => c.default || c),
   Table: () => import('../../components/Table.vue' /* webpackChunkName: "components/table" */).then(c => c.default || c)
 }
 

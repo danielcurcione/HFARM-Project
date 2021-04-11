@@ -12,5 +12,4 @@ You can directly use them in pages and other components without the need to impo
 - `<Header>` | `<header>` (components/Header.vue)
 - `<Navbar>` | `<navbar>` (components/Navbar.vue)
 - `<NoteDialog>` | `<note-dialog>` (components/NoteDialog.vue)
-- `<OptionButton>` | `<option-button>` (components/OptionButton.vue)
 - `<Table>` | `<table>` (components/Table.vue)

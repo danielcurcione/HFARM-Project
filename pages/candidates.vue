@@ -68,6 +68,18 @@ export default {
       this.readData(s);
     },
 
+    removeCandidate(id) {
+      let url = 'https://api.sheety.co/ec400a6bb2ac250558c262e5fab58060/hfarmData/candidates/' + id;
+      
+      axios.delete(url).then((response) => {
+        debugger;
+        this.readData();
+      }, (error) => {
+        debugger;
+        console.log(error);
+      });
+    },
+
     openDialog (opt, name) {
       this.noteDialog = opt;
       this.noteName = name;

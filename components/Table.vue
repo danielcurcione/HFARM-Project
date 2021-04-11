@@ -3,33 +3,55 @@
     <table class="table is-fullwidth">
       <thead>
         <tr>
-          <th>Candidates</th>
-          <th>Senior level</th>
-          <th>Call they applied to</th>
-          <th>Notes</th>
-          <th></th>
+          <th width="20%">Candidates</th>
+          <th width="20%">Client</th>
+          <th width="20%">Senior level</th>
+          <th width="20%">Call they applied to</th>
+          <th width="10%">Notes</th>
+          <th width="10%"></th>
         </tr>
       </thead>
-      <tbody>
-        <template v-for="item in data">
-          <tr :key="item.id">
-            <td> {{ item.candidates }} </td>
-            <td> {{ item.seniorLevel }} </td>
-            <td> {{ item.callTheyAppliedTo }} </td>
-            <td>
-              <div v-if="item.notes === 'X'">
-                <button class="button is-white" @click="openDialog(true, item.candidates)">
-                  <img src="../assets/note.svg" width="20px">
-                </button>
-              </div>
-            </td>
-            <td>
-              <OptionButton />
-            </td>
-          </tr>
-        </template>
-      </tbody>
     </table>
+
+    <div class="scoll-table">
+      <table class="table is-fullwidth table-items">
+        <!-- <thead>
+          <tr>
+            <th width="20%">Candidates</th>
+            <th width="20%">Client</th>
+            <th width="20%">Senior level</th>
+            <th width="20%">Call they applied to</th>
+            <th width="10%">Notes</th>
+            <th width="10%"></th>
+          </tr>
+        </thead> -->
+        <tbody>
+          <template v-for="item in data">
+            <tr :key="item.id" style="margin-top: 5px">
+              <td width="20%"> {{ item.candidates }} </td>
+              <td width="20%" :class="'client-input ' + item.client"> {{ item.client }} </td>
+              <td width="20%"> {{ item.seniorLevel }} </td>
+              <td width="20%"> {{ item.callTheyAppliedTo }} </td>
+              <td width="10%">
+                <div v-if="item.notes === 'X'">
+                  <button class="button is-white" @click="openDialog(true, item.candidates)">
+                    <img src="../assets/note.svg" width="20px">
+                  </button>
+                </div>
+              </td>
+              <td width="10%">
+                <div>
+                  <button class="button is-white" @click="removeCandidate(item.id)">
+                    <img src="../assets/trash.svg" width="20px">
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 </template>
 
@@ -40,6 +62,10 @@ export default {
     openDialog (opt, name) {
       this.$parent.openDialog(opt, name)
     },
+
+    removeCandidate(id) {
+      this.$parent.removeCandidate(id);
+    }
   }
 }
 </script>

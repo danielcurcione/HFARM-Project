@@ -3,24 +3,28 @@
     "name": "calls",
     "path": "/calls",
     "component": "/Users/Daniel/Desktop/Git/HFARM-Project/pages/calls.vue",
-    "chunkName": "pages/calls"
+    "chunkName": "pages/calls",
+    "_name": "_5e4f0386"
   },
   {
     "name": "candidates",
     "path": "/candidates",
     "component": "/Users/Daniel/Desktop/Git/HFARM-Project/pages/candidates.vue",
-    "chunkName": "pages/candidates"
+    "chunkName": "pages/candidates",
+    "_name": "_5e8e28d0"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/Daniel/Desktop/Git/HFARM-Project/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_43f5e28c"
   },
   {
     "name": "type-slug",
     "path": "/:type/:slug?",
     "component": "/Users/Daniel/Desktop/Git/HFARM-Project/pages/_type/_slug.vue",
-    "chunkName": "pages/_type/_slug"
+    "chunkName": "pages/_type/_slug",
+    "_name": "_3fe872fc"
   }
 ]

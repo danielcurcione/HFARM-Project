@@ -83,22 +83,28 @@ p.control {
   display: flex !important;
   align-items: center !important;
   box-shadow: none;
-}
 
-.card-header-title {
-  margin: 0 !important;
-  padding: 0;
-
-  span {
-    background-color: $blue;
-    color: $white;
-    border-radius: 3px;
-    padding: 3px 6px;
-    font-weight: 500;
+  .icon {
+    &:hover {
+      cursor: pointer;
+    }
   }
 
-  span.external {
-    background-color: #11276A;
+  &-title {
+    margin: 0 !important;
+    padding: 0;
+  
+    span {
+      background-color: $blue;
+      color: $white;
+      border-radius: 3px;
+      padding: 3px 6px;
+      font-weight: 500;
+    }
+  
+    span.external {
+      background-color: #11276A;
+    }
   }
 }
 
@@ -210,11 +216,15 @@ button.delete {
 }
 
 div.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
   .logo-title {
     font-size: 35px;
     font-weight: 700;
     color: $blue;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 5px $cyan;
     font-family: 'Work Sans', sans-serif;
     letter-spacing: -1px;
   }

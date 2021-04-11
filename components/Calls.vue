@@ -6,9 +6,9 @@
         <Card :noContent="true"/>
       </div>
       <div v-for="item in data" :key="item.id" class="card-item">
-        <nuxt-link to="/Internal/PosizioneN">
-          <Card :title="item.name" :client="item.client" :fav="item.favorite"/>
-        </nuxt-link>
+        <!-- <nuxt-link :to="'/' + item.client + '/' + item.name"> -->
+          <Card :id="item.id" :title="item.name" :client="item.client" :fav="item.favorite"/>
+        <!-- </nuxt-link> -->
       </div>
     </div>
 
@@ -22,6 +22,7 @@
 <script>
 import Card from '../components/Card';
 import AddDialog from '../components/AddDialog';
+import { SpringSpinner } from 'epic-spinners'
 
 export default {
   props: ['data'],
@@ -37,10 +38,18 @@ export default {
 
     readData() {
       this.$parent.readData();
+    },
+
+    addToFav(obj) {
+      this.$parent.addToFav(obj);
+    },
+
+    remove(obj) {
+      this.$parent.remove(obj);
     }
   },
   components: {
-    Card, AddDialog
+    Card, AddDialog, SpringSpinner
   }
 }
 </script>

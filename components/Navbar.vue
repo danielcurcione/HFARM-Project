@@ -2,7 +2,8 @@
   <div class="navbar">
 
     <div class="logo">
-      <span class="logo-title">Mistral.</span>
+      <img src="../assets/logo.png" width="35px">
+      <span class="logo-title">Mistral</span>
     </div>
 
     <div class="profile">
@@ -83,6 +84,9 @@ export default {
       internal: [],
       external: []
     }
+  },
+  created() {
+    this.$root.$refs.Navbar = this;
   },
   mounted() {
     this.readData();

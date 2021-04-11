@@ -4,9 +4,9 @@
       <thead>
         <tr>
           <th width="20%">Candidates</th>
-          <th width="20%">Client</th>
+          <th width="15%">Client</th>
           <th width="20%">Senior level</th>
-          <th width="20%">Call they applied to</th>
+          <th width="25%">Call they applied to</th>
           <th width="10%">Notes</th>
           <th width="10%"></th>
         </tr>
@@ -15,23 +15,13 @@
 
     <div class="scoll-table">
       <table class="table is-fullwidth table-items">
-        <!-- <thead>
-          <tr>
-            <th width="20%">Candidates</th>
-            <th width="20%">Client</th>
-            <th width="20%">Senior level</th>
-            <th width="20%">Call they applied to</th>
-            <th width="10%">Notes</th>
-            <th width="10%"></th>
-          </tr>
-        </thead> -->
         <tbody>
           <template v-for="item in data">
             <tr :key="item.id" style="margin-top: 5px">
               <td width="20%"> {{ item.candidates }} </td>
-              <td width="20%" :class="'client-input ' + item.client"> {{ item.client }} </td>
+              <td width="15%" :class="'client-input ' + item.client"> {{ item.client }} </td>
               <td width="20%"> {{ item.seniorLevel }} </td>
-              <td width="20%"> {{ item.callTheyAppliedTo }} </td>
+              <td width="25%"> {{ item.callTheyAppliedTo }} </td>
               <td width="10%">
                 <div v-if="item.notes === 'X'">
                   <button class="button is-white" @click="openDialog(true, item.candidates)">

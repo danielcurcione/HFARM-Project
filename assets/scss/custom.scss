@@ -321,11 +321,57 @@ div.profile {
     background-color: $grey;
   }
 
-  tr {
-    border-radius: 5px;
+  th {
+    border: none;
+    padding: 10px;
+  }
+  
+  td {
+    border: none;
+    padding: 5px 10px;
+  }
+}
+
+div.job-description {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: $white;
+  border-radius: 5px;
+
+  div {
+    width: calc(100% - 350px);
   }
 
-  th, td {
-    border: none;
+  div.time {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $white;
+    border-radius: 5px;
+  
+    h3 {
+      margin: 0 !important;
+    }
+  
+    progress {
+      margin-top: 10px;
+    }
+  
+    div.date {
+      width: 100%;
+      
+      p {
+        margin-top: 5px;
+  
+        span {
+          font-weight: 700;
+        }
+      }
+    }
   }
 }

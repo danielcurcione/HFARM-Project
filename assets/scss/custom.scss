@@ -301,7 +301,8 @@ div.profile {
   height: 87vh;
 
   .scoll-table {
-    height: 80vh;
+    height: auto;
+    max-height: 80vh;
     overflow: scroll;
   }
 
@@ -330,6 +331,11 @@ div.profile {
     border: none;
     padding: 5px 10px;
   }
+}
+
+.call-table {
+  margin-top: 0;
+  height: max-content;
 }
 
 div.job-description {
@@ -374,4 +380,8 @@ div.job-description {
       }
     }
   }
+}
+
+article {
+  margin: 20px;
 }

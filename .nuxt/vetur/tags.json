@@ -2,8 +2,14 @@
   "AddDialog": {
     "description": "Auto imported from components/AddDialog.vue"
   },
+  "CallTable": {
+    "description": "Auto imported from components/CallTable.vue"
+  },
   "Calls": {
     "description": "Auto imported from components/Calls.vue"
+  },
+  "CandidatesTable": {
+    "description": "Auto imported from components/CandidatesTable.vue"
   },
   "Card": {
     "description": "Auto imported from components/Card.vue"
@@ -11,13 +17,13 @@
   "Header": {
     "description": "Auto imported from components/Header.vue"
   },
+  "JobDescription": {
+    "description": "Auto imported from components/JobDescription.vue"
+  },
   "Navbar": {
     "description": "Auto imported from components/Navbar.vue"
   },
   "NoteDialog": {
     "description": "Auto imported from components/NoteDialog.vue"
-  },
-  "Table": {
-    "description": "Auto imported from components/Table.vue"
   }
 }

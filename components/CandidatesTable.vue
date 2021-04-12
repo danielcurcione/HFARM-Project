@@ -5,8 +5,8 @@
         <tr>
           <th width="20%">Candidates</th>
           <th width="15%">Client</th>
-          <th width="20%">Senior level</th>
-          <th width="25%">Call they applied to</th>
+          <th width="30%">Application</th>
+          <th width="15%">Senior level</th>
           <th width="10%">Notes</th>
           <th width="10%"></th>
         </tr>
@@ -20,8 +20,12 @@
             <tr :key="item.id" style="margin-top: 5px">
               <td width="20%"> {{ item.candidates }} </td>
               <td width="15%" :class="'client-input ' + item.client"> {{ item.client }} </td>
-              <td width="20%"> {{ item.seniorLevel }} </td>
-              <td width="25%"> {{ item.callTheyAppliedTo }} </td>
+              <td width="30%">
+                <nuxt-link :to="'/' + item.client + '/' + item.application" style="color:black; text-decoration: underline">
+                  {{ item.application }} &#8599
+                </nuxt-link>
+              </td>
+              <td width="15%"> {{ item.seniorLevel }} </td>
               <td width="10%">
                 <div v-if="item.notes === 'X'">
                   <button class="button is-white" @click="openDialog(true, item.candidates)">

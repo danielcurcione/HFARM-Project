@@ -23,7 +23,7 @@
           <img src="../assets/trash.svg" width="15px">
         </div>
       </header>
-      <nuxt-link :to="'/' + client + '/' + title" style="color: black;">
+      <nuxt-link :to="'/' + client + '/' + title" style="color: black; text-decoration: underline">
         <div class="card-content">
           <div class="content">
               {{ title }} &#8599

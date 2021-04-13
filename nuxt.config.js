@@ -20,7 +20,6 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~assets/scss/three-dots.css',
     '~assets/scss/app.scss',
   ],
 

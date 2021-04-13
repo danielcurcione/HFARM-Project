@@ -11,6 +11,7 @@ You can directly use them in pages and other components without the need to impo
 - `<Calls>` | `<calls>` (components/Calls.vue)
 - `<CandidatesTable>` | `<candidates-table>` (components/CandidatesTable.vue)
 - `<Card>` | `<card>` (components/Card.vue)
+- `<Dashboard>` | `<dashboard>` (components/Dashboard.vue)
 - `<Header>` | `<header>` (components/Header.vue)
 - `<JobDescription>` | `<job-description>` (components/JobDescription.vue)
 - `<Navbar>` | `<navbar>` (components/Navbar.vue)

@@ -9,7 +9,20 @@
         </div>
 
         <!-- Right side -->
-        <div class="level-right">
+        <div class="level-right" v-show="searchFilter === 'true'">
+          <div class="level-item">
+            <div class="filters">
+              <div class="tabs is-toggle is-toggle-rounded is-small">
+                <ul>
+                  <template v-for="item in sortData">
+                    <li :key="item" :id="'filter_' + item">
+                      <a @click="changeTab(item)"> <span> {{ item }} </span> </a>
+                    </li>
+                  </template>
+                </ul>
+              </div>
+            </div>
+          </div>
           <div class="level-item">
             <div class="field has-addons">
               <p class="control">
@@ -31,11 +44,15 @@
 
 <script>
 export default {
-  props: ['title'],
+  props: ['title', 'searchFilter', 'sortData'],
   methods: {
     search() {
       var s = document.getElementById("searchInput").value;
       this.$parent.search(s);
+    },
+
+    changeTab(key) {
+      this.$parent.changeTab(key);
     }
   }
 }

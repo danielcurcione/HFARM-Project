@@ -2,7 +2,7 @@
   <div>
     <div>
 
-      <Header title="Candidates" />
+      <Header title="Candidates" searchFilter="true" :sortData="filters"/>
 
       <div v-show="noteDialog">
         <NoteDialog :name="noteName"/>
@@ -35,7 +35,7 @@ export default {
       candidates: [],
       noteDialog: false,
       noteName: '',
-      // loader: false
+      filters: ['All', 'Available', 'Refused']
     }
   },
   mounted() {
@@ -43,7 +43,6 @@ export default {
   },
   methods: {
     readData(filter) {
-      this.loader = true;
       let url = 'https://api.sheety.co/ec400a6bb2ac250558c262e5fab58060/hfarmData/candidates';
       var list = [];
     
@@ -59,8 +58,9 @@ export default {
           });
         }
 
-        // this.loader = false;
+        this.candidatesBk = list;
         this.candidates = list;
+        this.resetFilter();
       });
     },
 
@@ -82,6 +82,36 @@ export default {
       this.noteDialog = opt;
       this.noteName = name;
     },
+
+    changeTab(key) {
+      var tempList = [];
+
+      if (key != 'All') {
+        this.candidatesBk.forEach(element => {
+          if (element.availability === key) {
+            tempList.push(element);
+          }
+        });
+
+        this.candidates = tempList;
+      } else {
+        this.candidates = this.candidatesBk;
+      }
+
+      this.filters.forEach(element => {
+        if (element === key)
+          document.getElementById('filter_' + element).classList.add('is-active');
+        else
+          document.getElementById('filter_' + element).classList.remove('is-active');
+      });
+    },
+
+    resetFilter() {
+      this.filters.forEach(element => {
+        document.getElementById('filter_' + element).classList.remove('is-active');
+      });
+      document.getElementById('filter_All').classList.add('is-active');
+    }
   },
   async asyncData({ params }) {
     const slug = params.slug

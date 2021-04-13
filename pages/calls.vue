@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <Header title="Calls" />
+    <Header title="Calls" searchFilter="true" :sortData="filters"/>
     <Calls :data="cards"/>
     
   </div>
@@ -14,6 +14,8 @@ export default {
   data() {
     return {
       cards: [],
+      cardsBk: [],
+      filters: ['All', 'Internal', 'External']
     }
   },
   mounted() {
@@ -50,8 +52,10 @@ export default {
 
         fav = fav.reverse();
         list = list.reverse();
-        this.cards = fav.concat(list);
 
+        this.cards = fav.concat(list);
+        this.cardsBk = this.cards;
+        this.resetFilter();
         this.$root.$refs.Navbar.readData();
       })
     },
@@ -81,6 +85,40 @@ export default {
       }, (error) => {
         console.log(error);
       });
+    },
+
+    changeTab(key) {
+      var tempList = [];
+
+      if (key != 'All') {
+        this.cardsBk.forEach(element => {
+          if (key === 'Internal') {
+            if (element.client === key)
+              tempList.push(element)
+          } else {
+            if (element.client != 'Internal') 
+              tempList.push(element)
+          }
+        });
+
+        this.cards = tempList;
+      } else {
+        this.cards = this.cardsBk;
+      }
+
+      this.filters.forEach(element => {
+        if (element === key)
+          document.getElementById('filter_' + element).classList.add('is-active');
+        else
+          document.getElementById('filter_' + element).classList.remove('is-active');
+      });
+    },
+
+    resetFilter() {
+      this.filters.forEach(element => {
+        document.getElementById('filter_' + element).classList.remove('is-active');
+      });
+      document.getElementById('filter_All').classList.add('is-active');
     }
   }
 }

@@ -3,8 +3,9 @@
     <table class="table is-fullwidth">
       <thead>
         <tr>
-          <th width="20%">Candidates</th>
-          <th width="15%">Client</th>
+          <th width="2%"></th>
+          <th width="23%">Candidates</th>
+          <th width="10%">Client</th>
           <th width="30%">Application</th>
           <th width="15%">Senior level</th>
           <th width="10%">Notes</th>
@@ -18,8 +19,12 @@
         <tbody>
           <template v-for="item in data">
             <tr :key="item.id" style="margin-top: 5px">
-              <td width="20%"> {{ item.candidates }} </td>
-              <td width="15%" :class="'client-input ' + item.client"> {{ item.client }} </td>
+              <td width="2%">
+                <div class="icon-refused" v-if="item.availability === 'Refused'"></div>
+                <div class="icon-availability" v-else></div>
+              </td>
+              <td width="23%"> {{ item.candidates }} </td>
+              <td width="10%" :class="'client-input ' + item.client"> {{ item.client }} </td>
               <td width="30%">
                 <nuxt-link :to="'/' + item.client + '/' + item.application" style="color:black; text-decoration: underline">
                   {{ item.application }} &#8599

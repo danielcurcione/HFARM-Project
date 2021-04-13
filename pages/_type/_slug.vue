@@ -16,7 +16,7 @@
         </div>
       </article>
 
-      <div class="candidates" style="padding-top: 0" v-else>
+      <div class="candidates" v-else>
         <CallTable :data="candidates"/>
       </div>
     
@@ -33,7 +33,8 @@ export default {
       noData: false,
       candidates: [],
       noteDialog: false,
-      noteName: ''
+      noteName: '',
+      status: ['Scouting','Technical interview','Preliminary interview','Assessment'],
     }
   },
   mounted() {
@@ -48,7 +49,7 @@ export default {
       axios.get(url).then(response => {
         if (this.slug) {
           response.data.candidates.forEach(element => {
-            if (element.application.includes(this.slug) && element.client.includes(this.type))
+            if (element.application.includes(this.slug) && element.client.includes(this.type) && element.availability != 'Refused')
               list.push(element);
           });
         } else {
@@ -80,6 +81,19 @@ export default {
         console.log(error);
       });
     },
+
+    editStatusCandidate(obj) {
+      let url = 'https://api.sheety.co/ec400a6bb2ac250558c262e5fab58060/hfarmData/candidates/' + obj.id;
+      
+      axios.put(url, {
+        candidate: obj
+      })
+      .then((response) => {
+        this.readData();
+      }, (error) => {
+        console.log(error);
+      });
+    }
   },
   async asyncData({ params }) {
     const slug = params.slug

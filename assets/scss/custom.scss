@@ -14,10 +14,23 @@ html, body {
 
 nav.level {
   align-items: center;
+  height: 50px;
   padding: 25px 20px 5px;
   
   h2 {
     font-weight: 700;
+  }
+
+  .level-right {
+    ul {
+      margin: 0;
+      font-size: 14px;
+
+      li a {
+        background-color: $white;
+        border: none;
+      }
+    }
   }
 }
 
@@ -290,19 +303,24 @@ div.profile {
 }
 
 .candidates {
-  padding: 10px 20px;
+  padding: 0px 20px;
 }
 
 .candidates-items {
-  margin-top: 10px;
+  width: 100%;
+  margin-top: 20px;
   border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
   padding: 10px;
   background-color: $white;
-  height: 87vh;
+  // height: auto;
+  // max-height: 89vh;
+  height: 89vh;
 
   .scoll-table {
     height: auto;
-    max-height: 80vh;
+    max-height: 82vh;
     overflow: scroll;
   }
 
@@ -335,7 +353,26 @@ div.profile {
 
 .call-table {
   margin-top: 0;
+  padding-bottom: 5px;
   height: max-content;
+
+  .table-items {
+    margin-top: 5px;
+  }
+}
+
+.icon-refused {
+  border: 3px solid red;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.icon-availability {
+  border: 3px solid green;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
 
 div.job-description {
@@ -384,4 +421,22 @@ div.job-description {
 
 article {
   margin: 20px;
+}
+
+.message-body {
+  padding: 10px 20px;
+}
+
+.status-cell {
+  div {
+    width: 90%;
+    
+    select {
+      padding-left: 15px;
+
+      &:hover {
+        border: 1px solid $blue;
+      }
+    }
+  }
 }

@@ -1,0 +1,39 @@
+{
+  "entry": "server.js",
+  "files": {
+    "components/add-dialog.js": "components/add-dialog.js",
+    "components/call-table.js": "components/call-table.js",
+    "components/calls.js": "components/calls.js",
+    "components/candidates-table.js": "components/candidates-table.js",
+    "components/card.js": "components/card.js",
+    "components/dashboard.js": "components/dashboard.js",
+    "components/header.js": "components/header.js",
+    "components/info-page.js": "components/info-page.js",
+    "components/job-description.js": "components/job-description.js",
+    "components/note-dialog.js": "components/note-dialog.js",
+    "pages/_type/_slug.js": "pages/_type/_slug.js",
+    "pages/calls.js": "pages/calls.js",
+    "pages/candidates.js": "pages/candidates.js",
+    "pages/index.js": "pages/index.js",
+    "pages/info.js": "pages/info.js",
+    "server.js": "server.js"
+  },
+  "maps": {
+    "components/add-dialog.js": "components/add-dialog.js.map",
+    "components/call-table.js": "components/call-table.js.map",
+    "components/calls.js": "components/calls.js.map",
+    "components/candidates-table.js": "components/candidates-table.js.map",
+    "components/card.js": "components/card.js.map",
+    "components/dashboard.js": "components/dashboard.js.map",
+    "components/header.js": "components/header.js.map",
+    "components/info-page.js": "components/info-page.js.map",
+    "components/job-description.js": "components/job-description.js.map",
+    "components/note-dialog.js": "components/note-dialog.js.map",
+    "pages/_type/_slug.js": "pages/_type/_slug.js.map",
+    "pages/calls.js": "pages/calls.js.map",
+    "pages/candidates.js": "pages/candidates.js.map",
+    "pages/index.js": "pages/index.js.map",
+    "pages/info.js": "pages/info.js.map",
+    "server.js": "server.js.map"
+  }
+}

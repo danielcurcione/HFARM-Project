@@ -3,7 +3,7 @@ export default {
   head: {
     title: 'HFARM Project',
     htmlAttrs: {
-      lang: 'it'
+      lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },

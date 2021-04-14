@@ -8,6 +8,7 @@ const components = {
   Card: () => import('../../components/Card.vue' /* webpackChunkName: "components/card" */).then(c => c.default || c),
   Dashboard: () => import('../../components/Dashboard.vue' /* webpackChunkName: "components/dashboard" */).then(c => c.default || c),
   Header: () => import('../../components/Header.vue' /* webpackChunkName: "components/header" */).then(c => c.default || c),
+  InfoPage: () => import('../../components/InfoPage.vue' /* webpackChunkName: "components/info-page" */).then(c => c.default || c),
   JobDescription: () => import('../../components/JobDescription.vue' /* webpackChunkName: "components/job-description" */).then(c => c.default || c),
   Navbar: () => import('../../components/Navbar.vue' /* webpackChunkName: "components/navbar" */).then(c => c.default || c),
   NoteDialog: () => import('../../components/NoteDialog.vue' /* webpackChunkName: "components/note-dialog" */).then(c => c.default || c)

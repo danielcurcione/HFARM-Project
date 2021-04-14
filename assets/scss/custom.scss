@@ -242,7 +242,7 @@ div.logo {
 }
 
 div.profile {
-  margin: 30px 0;
+  margin: 20px 0;
   background-color: $cyan;
   width: 100%;
   height: max-content;
@@ -484,7 +484,7 @@ article {
     }
 
     .image {
-      margin-left: 20px;
+      margin-left: 30px;
       border-radius: 50%;
       background-color: $cyan;
 
@@ -493,6 +493,48 @@ article {
         width: 50px;
         height: 50px;
       }
+    }
+  }
+}
+
+.profile.info {
+  background-color: transparent;
+
+  button.button {
+    width: 100%;
+    
+    img {
+      margin-right: 5px;
+    }
+  }
+}
+
+.infopage {
+  padding: 20px;
+
+  .content {
+    padding: 20px;
+    background-color: $white;
+    border-radius: 5px;
+    height: 90vh;
+    overflow: scroll;
+
+    article {
+      margin: 0;
+    }
+
+    span {
+      color: $blue;
+    }
+  }
+}
+
+.header-buttons {
+  button {
+    margin-left: 5px;
+
+    img {
+      margin-right: 10px;
     }
   }
 }

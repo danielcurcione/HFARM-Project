@@ -20,6 +20,9 @@
   "Header": {
     "description": "Auto imported from components/Header.vue"
   },
+  "InfoPage": {
+    "description": "Auto imported from components/InfoPage.vue"
+  },
   "JobDescription": {
     "description": "Auto imported from components/JobDescription.vue"
   },

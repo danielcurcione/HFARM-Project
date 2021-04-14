@@ -5,6 +5,7 @@ export { default as CandidatesTable } from '../../components/CandidatesTable.vue
 export { default as Card } from '../../components/Card.vue'
 export { default as Dashboard } from '../../components/Dashboard.vue'
 export { default as Header } from '../../components/Header.vue'
+export { default as InfoPage } from '../../components/InfoPage.vue'
 export { default as JobDescription } from '../../components/JobDescription.vue'
 export { default as Navbar } from '../../components/Navbar.vue'
 export { default as NoteDialog } from '../../components/NoteDialog.vue'
@@ -16,6 +17,7 @@ export const LazyCandidatesTable = import('../../components/CandidatesTable.vue'
 export const LazyCard = import('../../components/Card.vue' /* webpackChunkName: "components/card" */).then(c => c.default || c)
 export const LazyDashboard = import('../../components/Dashboard.vue' /* webpackChunkName: "components/dashboard" */).then(c => c.default || c)
 export const LazyHeader = import('../../components/Header.vue' /* webpackChunkName: "components/header" */).then(c => c.default || c)
+export const LazyInfoPage = import('../../components/InfoPage.vue' /* webpackChunkName: "components/info-page" */).then(c => c.default || c)
 export const LazyJobDescription = import('../../components/JobDescription.vue' /* webpackChunkName: "components/job-description" */).then(c => c.default || c)
 export const LazyNavbar = import('../../components/Navbar.vue' /* webpackChunkName: "components/navbar" */).then(c => c.default || c)
 export const LazyNoteDialog = import('../../components/NoteDialog.vue' /* webpackChunkName: "components/note-dialog" */).then(c => c.default || c)

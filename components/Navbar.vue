@@ -72,6 +72,15 @@
       </aside>
     </div>
 
+    <nuxt-link to='/info'>
+      <div class="profile info">
+        <button class="button is-warning is-light">
+          <img src="../assets/pin.svg" width="15px">
+          Info
+        </button>
+      </div>
+    </nuxt-link>
+
   </div>
 </template>
 

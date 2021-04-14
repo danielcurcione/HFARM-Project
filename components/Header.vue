@@ -9,8 +9,8 @@
         </div>
 
         <!-- Right side -->
-        <div class="level-right" v-show="searchFilter === 'true'">
-          <div class="level-item">
+        <div class="level-right">
+          <div class="level-item" v-show="searchFilter === 'true'">
             <div class="filters">
               <div class="tabs is-toggle is-toggle-rounded is-small">
                 <ul>
@@ -23,7 +23,7 @@
               </div>
             </div>
           </div>
-          <div class="level-item">
+          <div class="level-item" v-show="searchFilter === 'true'">
             <div class="field has-addons">
               <p class="control">
                 <input id="searchInput" class="input" type="text" placeholder="Search...">
@@ -33,6 +33,22 @@
                   <img src="../assets/search.svg" width="15px">
                 </button>
               </p>
+            </div>
+          </div>
+          <div class="level-item" v-show="title === 'Info'">
+            <div class="header-buttons">
+              <a href="https://github.com/danielcurcione/HFARM-Project">
+                <button class="button is-dark">
+                  <img src="../assets/github.png" width="20px">
+                  GitHub
+                </button>
+              </a>
+              <a href="https://docs.google.com/spreadsheets/d/1SpXE2sQsiYNWtDl7DOilz-QuqjGXSb-70cDESItfkt8/edit?usp=sharing">
+                <button class="button is-success">
+                  <img src="../assets/spreadsheets.png" width="15px">
+                  Spreadsheet
+                </button>
+              </a>
             </div>
           </div>
         </div>

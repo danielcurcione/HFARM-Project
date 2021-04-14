@@ -2,7 +2,7 @@
 
 ## Demo
 
-View [live](https://hfarm-project.netlify.app/) project
+View [live](https://hfarm-project.netlify.app/) project ✨
 
 
 ## Build Setup

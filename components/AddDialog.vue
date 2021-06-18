@@ -3,18 +3,18 @@
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title">Aggiungi nuova Calls</p>
+        <p class="modal-card-title">Add new call</p>
         <button class="delete" aria-label="close" @click="openDialog(false)"></button>
       </header>
       <section class="modal-card-body">
         <div class="field">
-          <label class="label">Nome</label>
+          <label class="label">Name</label>
           <div class="control">
-            <input id="DescrInput" class="input" type="text" placeholder="Testo">
+            <input id="DescrInput" class="input" type="text" placeholder="Text">
           </div>
         </div>
         <div class="field">
-          <label class="label">Cliente</label>
+          <label class="label">Customer</label>
           <div class="control">
             <div class="select">
               <select @change="onChange($event)" id="ClientSelect">
@@ -24,20 +24,20 @@
             </div>
           </div>
           <div class="control" style="margin-top: 10px" v-if="client === 'External'">
-            <input id="ClientNameInput" class="input" type="text" placeholder="Nome cliente">
+            <input id="ClientNameInput" class="input" type="text" placeholder="Customer name">
           </div>
         </div>
         <div class="field">
           <div class="control">
             <label class="checkbox">
               <input type="checkbox" id="FavCheck">
-              Aggiungi ai preferiti
+              Add to favorite
             </label>
           </div>
         </div>
       </section>
       <footer class="modal-card-foot">
-        <button class="button is-success" @click="createNewCard()">Conferma</button>
+        <button class="button is-success" @click="createNewCard()">Confirm</button>
       </footer>
     </div>
   </div>

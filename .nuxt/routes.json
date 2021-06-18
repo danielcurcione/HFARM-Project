@@ -3,30 +3,35 @@
     "name": "calls",
     "path": "/calls",
     "component": "/Users/Daniel/Desktop/Hfarm/HFARM-Project/pages/calls.vue",
-    "chunkName": "pages/calls"
+    "chunkName": "pages/calls",
+    "_name": "_100d2a6e"
   },
   {
     "name": "candidates",
     "path": "/candidates",
     "component": "/Users/Daniel/Desktop/Hfarm/HFARM-Project/pages/candidates.vue",
-    "chunkName": "pages/candidates"
+    "chunkName": "pages/candidates",
+    "_name": "_779c12e8"
   },
   {
     "name": "info",
     "path": "/info",
     "component": "/Users/Daniel/Desktop/Hfarm/HFARM-Project/pages/info.vue",
-    "chunkName": "pages/info"
+    "chunkName": "pages/info",
+    "_name": "_1484abea"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/Daniel/Desktop/Hfarm/HFARM-Project/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_0525fb46"
   },
   {
     "name": "type-slug",
     "path": "/:type/:slug?",
     "component": "/Users/Daniel/Desktop/Hfarm/HFARM-Project/pages/_type/_slug.vue",
-    "chunkName": "pages/_type/_slug"
+    "chunkName": "pages/_type/_slug",
+    "_name": "_88de72f0"
   }
 ]

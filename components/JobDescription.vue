@@ -35,8 +35,8 @@
 export default {
   data() {
     return {
-      startDate: '2021-02-01',
-      endDate: '2021-05-01',
+      startDate: '2021-06-01',
+      endDate: '2023-01-01',
       days: 0,
       differentDays: 0,
       pastDays: 0

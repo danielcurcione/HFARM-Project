@@ -37,7 +37,7 @@
           </div>
           <div class="level-item" v-show="title === 'Info'">
             <div class="header-buttons">
-              <a href="https://github.com/danielcurcione/HFARM-Project">
+              <a href="https://github.com/danielcurcione/">
                 <button class="button is-dark">
                   <img src="../assets/github.png" width="20px">
                   GitHub

@@ -3,12 +3,12 @@
 
     <div class="logo">
       <img src="../assets/logo.png" width="35px">
-      <span class="logo-title">Mistral</span>
+      <span class="logo-title">HR Manager</span>
     </div>
 
     <div class="profile">
       <div class="avatar">
-        <img src="../assets/avatar2.png">
+        <img src="../assets/avatar.jpg">
       </div>
       <div class="info">
         <span class="name">Daniel Curcione</span>

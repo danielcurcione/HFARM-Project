@@ -2,31 +2,31 @@
   {
     "name": "calls",
     "path": "/calls",
-    "component": "/Users/Daniel/Desktop/Git/HFARM-Project/pages/calls.vue",
+    "component": "/Users/Daniel/Desktop/Hfarm/HFARM-Project/pages/calls.vue",
     "chunkName": "pages/calls"
   },
   {
     "name": "candidates",
     "path": "/candidates",
-    "component": "/Users/Daniel/Desktop/Git/HFARM-Project/pages/candidates.vue",
+    "component": "/Users/Daniel/Desktop/Hfarm/HFARM-Project/pages/candidates.vue",
     "chunkName": "pages/candidates"
   },
   {
     "name": "info",
     "path": "/info",
-    "component": "/Users/Daniel/Desktop/Git/HFARM-Project/pages/info.vue",
+    "component": "/Users/Daniel/Desktop/Hfarm/HFARM-Project/pages/info.vue",
     "chunkName": "pages/info"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/Daniel/Desktop/Git/HFARM-Project/pages/index.vue",
+    "component": "/Users/Daniel/Desktop/Hfarm/HFARM-Project/pages/index.vue",
     "chunkName": "pages/index"
   },
   {
     "name": "type-slug",
     "path": "/:type/:slug?",
-    "component": "/Users/Daniel/Desktop/Git/HFARM-Project/pages/_type/_slug.vue",
+    "component": "/Users/Daniel/Desktop/Hfarm/HFARM-Project/pages/_type/_slug.vue",
     "chunkName": "pages/_type/_slug"
   }
 ]
